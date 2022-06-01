@@ -1,145 +1,479 @@
-/*  ==========================
-    BASE TYPOGRAPHY
-    This is added as a template to help start. 
-    You should change the fonts, font-sizes and anything else appropriate for your site.
-    ========================== */
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Playfair+Display&family=Tiro+Kannada&family=Ubuntu&display=swap');
+/* font-family: 'Cairo', sans-serif; 
+font-family: 'Playfair Display', serif;
+font-family: 'Tiro Kannada', serif;
+font-family: 'Ubuntu', sans-serif;*/
+*{
+   margin: 0;
+   padding:0;
+   font-family: 'PT Sans', sans-serif; 
+  justify-content: center;
+   margin-left: auto;
+  margin-right:auto;
+  scroll-behavior: smooth;
+}
 
-/* Optional, include a web font. @import must come before other styles. These examples are commented out */
-
-/*
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500');
-*/
-
-/* The html and body selectors below set the base type for the entire page */
 html {
-  font-size: 1em;
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+section {
+  height: 100vh;
+}
+.tag {
 }
 
-body {
-  font-family: sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #333;
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
 }
 
-
-/* This adds space between paragraphs and list items*/
-/* NOTE: most Navigations use list items so you will need to */
-/* explicity set the margins on those so this rule doesn't */
-/* mess up your navigation styling */
-p,
-li {
-  margin-top: 0;
-  margin-bottom: 1em;
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
-
-/* Base Styling for headings.
-  You can and should modify these to fit your site*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-  font-family: serif;
+.yellow {
+  background-color: lightyellow;
+}
+.red {
+  background-color: lightcoral;
+}
+.blue {
+  background-color: lightblue;
+}
+.green {
+  background-color: lightgreen;
 }
 
-
-/* For each of your headings at minimum set the margin, size, line-height. 
-Adjust font-weight and other properties as needed. */
-
-h1 {
-  font-size: 5.063em;
-  line-height: 1;
-  margin: 0 0 0.5em 0;
-}
-
-h2 {
-  font-size: 3.375em;
-  line-height: 1.2;
-  margin: 1.5em 0 0.5em 0;
-}
-
-h3 {
-  font-size: 2.25em;
-  line-height: 1;
-  margin: 1.5em 0 0.25em 0;
-}
-
-h4 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin: 1.5em 0 0.5em 0;
-  font-weight: 400;
-}
-
-h5 {
-  font-size: 1em;
-  line-height: 1;
-  margin: 1.5em 0 0.5em 0;
-  font-weight: 400;
-}
-
-h6 {
-  font-size: 1em;
-  line-height: 1.5;
-  margin: 1em 0 0 0;
-  font-weight: 400;
-  /* normal */
-  text-transform: uppercase;
-}
-
-/* ======================================================
-   Responsive Styling and Layout
-   =======================================================  */
-
-/* ========== Use Border Box model ============ */
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+header{
+   font-family: 'PT Sans', sans-serif;  
+  /* background-color: #000; */
+  color: gold;
+   top: 0;
+  width: 100%;
+  max-height:50px;
+  position: fixed;
+  /* float: right; */
+  padding: 20px;
   
-  /* ======== Basic Responsive Images and Video ========= */
-  img,video{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-  }
-  
-  /* ======== Responsive Embedded Video ================= */
-  /* to use this add a div with class videoWrapper around the iframe markup copied from YouTube or Vimeo. Then also add a ratio-16-9 (most common) or ratio-4-3 class to the wrapper depending on the aspect ratio of your video */
-  /* More info here: https://codepen.io/profstein/pen/mArLRj */
-  .videoWrapper {
-      position: relative;
-      padding-top: 25px;
-      height: 0;
-    clear:both;
-    outline:1px solid red;
-  }
-  
-  .videoWrapper.ratio-16-9{
-      padding-bottom: 56.25%; /* 16:9 */
-  }
-  
-  .videoWrapper.ratio-4-3{
-      padding-bottom: 75%; /* 4:3 */
-  }
-  
-  .videoWrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }
-  
-  /* ================= ===========================
-  ADD YOUR CSS HERE 
-  ================================================ */
-  /* Add your CSS for the site here */
+}
 
+.navbar {
+  overflow: hidden;
+  /* background-color: #000; */
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position:fixed;
+  width: 100%;
+   margin-left: auto;
+  margin-right:auto;
+  height: 40px;
+  float:right;
+}
+.big{
+  border-style: solid;
+  /* padding:20px; */
+  margin:0 auto;
+  /* display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap:20px; */
+  /* padding: 40px; */
+
+} 
+.navbar a {
+  /* float: right; */
+  font-size: 24px;
+  color: #FCE95F;
+  text-align: right;
+  padding: 7px;
+  text-decoration: none;
+  height: auto;
+ }
+
+ .material-symbols-outlined {
+   font-variation-settings:
+   'FILL' 0,
+   'wght' 400,
+   'GRAD' 0,
+   'opsz' 48
+ }
+
+
+ main{
+  margin-top: 20px; 
+} 
+/* body{
+ padding: 20px; 
+} */
+
+h1{
+ font-family: 'PT Sans', sans-serif;  
+  font-size:40px;
+  width: 100%;
+  color: #222;
+  
+}
+
+h2{
+  font-family: 'PT Sans', sans-serif;  
+ font-size:34px;
+}
+
+h3{
+    font-size: 28px;
+}
+h4{
+     font-size: 22px;
+}
+h5{
+    font-size: 20px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+p{
+  font-size: 18px;
+}
+
+img{
+/*   max-width:400px;
+  max-height: 400px; */
+  width: auto;
+  max-width: 450px;
+}
+.homebio{
+   box-sizing: border-box;
+  background-color:#88B489;
+width: 100%;
+  height: auto;
+ margin: 0 auto; 
+  width: 100%;
+  text-align: center;
+}
+.bio{
+ display: grid;
+ grid-template-columns: 50% 50%;
+ grid-template-rows: auto;
+ padding: 0;
+}
+
+.devimg{
+  max-width: 450px;
+/*   box-shadow: 10px 15px; */
+}
+
+.devgrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto;
+/* height: 100hv; */
+ margin: 0 auto; 
+  justify-content:center;
+/*   place-items: center; */
+width: 100%;
+  max-width: 1050px;
+ padding: 5px;
+}
+.grid1{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-auto-rows: auto;
+  /* grid-gap: 80px; */
+height: auto;
+ margin: 0 auto; 
+width: 100%;
+  max-width: 900px;
+ padding: 60px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  /* /* background-color: #88B489; */ 
+
+}
+.bluehand{
+  height: 100%;
+}
+
+.grid2{
+   display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+   max-width: 1050px;
+height: 100vh;
+ margin: 0 auto; 
+  max-width: 900px;
+  width: 100%;
+  padding: 60px;
+   justify-content: space-evenly;
+  justify-items: center;
+/*   align-content: space-evenly;
+  align-items: center; */
+
+}
+.def1{
+    background-color: #58ada3; 
+width: 100%;
+  height: 100vh;
+ margin: 0 auto; 
+ padding: 200px;
+ max-width: 1080px;
+ align-items:center;
+ justify-content: center;
+ 
+
+
+}
+
+.logoz{
+  position: relative;
+  margin: 10px 15px 15px 10px;
+  width:95%;
+  align-items: center;
+
+}
+.def{
+   background-color: #FFA07A;
+width: 100%;
+  height: 100vh;
+ margin: 0 auto; 
+justify-content:center;
+padding:200px;
+float: right;
+
+}
+
+
+.grid3{
+   display: grid;
+  grid-template-columns: 25% 75%;
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+   max-width: 1200px;
+height: 100vh;
+ margin: 0 auto; 
+ /* padding: 60px;  */
+width: 100%;
+  /* max-width: 900px;  */
+  /* padding: 60px; */
+   justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  
+
+}
+ 
+
+.tech{
+   display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+   grid-gap: 20px;
+height: auto;
+  margin: 0 auto; 
+  justify-content:center;
+/* background-image: linear-gradient( #2F7DC2,#FFC190); */
+  background-color: light grey;
+  width: 100%;
+  /* padding: 40px; */
+   justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  border-style: solid;
+
+}
+
+.headshot{
+  
+  box-shadow: -20px 14px 54px rgba(0, 0, 0, 0.55);
+   border-radius: 8px 8px 8px 8px;
+  /* padding: 10px; */
+  /* background-color:  rgba(47, 125, 194, 0.5); */
+  justify-content: center;
+  /* margin-top: 40px; */
+  padding: 20px;
+  width:35%;
+}
+
+.newshot{
+width:100%;
+border-radius: 8px 8px 8px 8px;
+/* box-shadow: -10px 10px; rgba(255, 255, 255, 0.5); */
+}
+/* 
+.card{
+  
+} */
+
+footer{
+  background-color: #000;
+  color: gold;
+  position: fixed;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 600px)
+{
+/* *{
+  max-width: 450px;
+} */
+  .devgrid{
+   display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 20px; */
+     padding: 20px;
+     margin: 0 auto;
+     margin-top: 30px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+  .grid1{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 20px; */
+     padding: 20px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+  .grid2{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 20px; */
+     padding: 20px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+
+  .grid3{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 20px; */
+     padding: 20px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+  .headshot{
+  
+   box-shadow: -20px 14px 54px rgba(0, 0, 0, 0.55);
+    border-radius: 8px 8px 8px 8px;
+
+   background-color:  #2F7DC2;
+   justify-content: center;
+  
+   max-width:75%;
+  
+ }
+ .newshot{
+    max-width:100%;
+ }
+ .big{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+ }
+}
+
+  @media screen and (max-width: 905px)
+{
+  /* *{
+  max-width: 700px;
+} */
+  .devgrid{
+   display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-gap: 20px;
+     padding: 40px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+.big{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  padding:20px;
+  font-size: 24px;
+ }
+
+/*   .devimg{
+   width: 600px;
+    height:auto;
+     padding: 40px;
+     } */
+
+  .grid1{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+     padding: 40px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+
+  .grid2{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+     padding: 40px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+  .grid3{
+     display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 40px;
+     justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  }
+  .headshot{
+  
+   box-shadow: -20px 14px 54px rgba(0, 0, 0, 0.55);
+    border-radius: 8px 8px 8px 8px;
+
+   background-color:  #2F7DC2;
+   justify-content: center;
+  
+   max-width:75%;
+  
+ }
+ .newshot{
+    max-width:100%;
+ }
+}
